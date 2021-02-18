@@ -42,6 +42,7 @@ namespace GcoinNode
             services.AddSwaggerGen();
 
             // add repositories
+            // **************************
             services.AddScoped<ITransactionRepo, TransactionRepo>();
 
         }

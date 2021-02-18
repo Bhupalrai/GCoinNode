@@ -10,8 +10,6 @@ namespace GcoinNode.Profiles
         {
             CreateMap<Transaction, TransactionReadDto>();
             CreateMap<TransactionCreateDto, Transaction>();
-            CreateMap<TransactionReadDto, Transaction>();
-            CreateMap<Transaction, TransactionCreateDto>();
         }
     }
 

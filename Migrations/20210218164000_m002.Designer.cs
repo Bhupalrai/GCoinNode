@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace GcoinNode.Migrations.ApplicationDb
+namespace GcoinNode.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210215204009_InitialCreate13")]
-    partial class InitialCreate13
+    [Migration("20210218164000_m002")]
+    partial class m002
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,9 +35,11 @@ namespace GcoinNode.Migrations.ApplicationDb
                         .HasColumnType("float");
 
                     b.Property<string>("Recipient")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sender")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("TimeStamp")

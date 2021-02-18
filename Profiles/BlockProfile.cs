@@ -8,8 +8,8 @@ namespace GcoinNode.Profiles
     {
         public BlockProfile()
         {
-            CreateMap<Block, BlockCreateDto>();
-            CreateMap<BlockReadDto, Block>();
+            CreateMap<Block, BlockDto>();
+            CreateMap<BlockDto, Block>();
         }
     }
 

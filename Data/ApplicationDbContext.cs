@@ -13,7 +13,6 @@ namespace GcoinNode.Data
         }
 
         public DbSet<Transaction> TransactionItem { get; set; }
-
-
+        public DbSet<Block> BlockItem { get; internal set; }
     }
 }

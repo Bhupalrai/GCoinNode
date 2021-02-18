@@ -2,7 +2,7 @@
 
 namespace GcoinNode.Dtos
 {
-    public class BlockReadDto
+    public class BlockDto
     {
         public int Height { get; set; }
         public long TimeStamp { get; set; }

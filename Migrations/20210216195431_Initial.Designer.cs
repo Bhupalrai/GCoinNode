@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace GcoinNode.Migrations.ApplicationDb
+namespace GcoinNode.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210215183937_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210216195431_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
