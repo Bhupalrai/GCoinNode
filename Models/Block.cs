@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace GcoinNode.Models
 {
-    [NotMapped]
     public class Block
     {
+        public int id { get; set; }
         public int Height { get; set; }
         public long TimeStamp { get; set; }
         public byte[] PrevHash { get; set; }

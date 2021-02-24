@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GcoinNode.Models;
+using GcoinNode.Dtos;
 
 namespace GcoinNode.Data
 {
@@ -7,8 +8,8 @@ namespace GcoinNode.Data
     {
         bool SaveChanges();
 
-        IEnumerable<Transaction> GetAllTransactions();
-        Transaction GetTransactionById(int id);
+        IEnumerable<TransactionReadDto> GetAllTransactions();
+        TransactionReadDto GetTransactionById(int id);
         void CreateTransaction(Transaction transaction);
     }
 }

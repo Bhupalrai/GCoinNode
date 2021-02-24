@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GcoinNode.Data;
-using GcoinNode.Data.impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,6 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 using GcoinNode.Profiles;
+using GcoinNode.Data;
+using GcoinNode.Data.impl;
 
 namespace GcoinNode
 {
@@ -34,19 +34,20 @@ namespace GcoinNode
                 s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
 
-            //services.AddAutoMapper(typeof(TransactionProfile));
-
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen();
+            services.AddMvc();
 
             // add repositories
             // **************************
             services.AddScoped<ITransactionRepo, TransactionRepo>();
+            services.AddScoped<IBlockRepo, BlockRepo>();
+
 
         }
-        
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

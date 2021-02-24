@@ -1,8 +1,6 @@
 ﻿using GcoinNode.Dtos;
-using System;
+using GcoinNode.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace GcoinNode.Data
 {
@@ -17,7 +15,7 @@ namespace GcoinNode.Data
         public BlockDto GetGenesisBlock();
 
         // Create
-        public void CreateBlock();
-        public void CreateGenesisBlock();   
+        public void CreateGenesisBlock();
+        void AddBlock(List<TransactionReadDto> transaction);
     }
 }

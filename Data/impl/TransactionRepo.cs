@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GcoinNode.Dtos;
 using GcoinNode.Models;
 
 
@@ -37,6 +38,16 @@ namespace GcoinNode.Data.impl
         {
           return  (_context.SaveChanges() >= 0);
 
+        }
+
+        IEnumerable<TransactionReadDto> ITransactionRepo.GetAllTransactions()
+        {
+            throw new NotImplementedException();
+        }
+
+        TransactionReadDto ITransactionRepo.GetTransactionById(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
